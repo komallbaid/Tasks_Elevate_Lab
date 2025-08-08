@@ -1,0 +1,145 @@
+/* Base desktop styles */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fafafa;
+  color: #333;
+}
+
+header, footer {
+  background: #333;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+}
+
+nav ul.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul.menu li {
+  margin: 0 20px;
+}
+
+nav ul.menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.2s;
+}
+
+nav ul.menu li a:hover {
+  color: #4CAF50;
+}
+
+/* Layout */
+
+.container {
+  max-width: 960px;
+  margin: 20px auto;
+  display: flex;
+  gap: 20px;
+  padding: 0 15px;
+}
+
+.content {
+  flex: 3;
+}
+
+.sidebar {
+  flex: 1;
+  background: #eee;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+/* Images fixed width for desktop */
+.sidebar img {
+  width: 300px;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+
+/* -------- Media Queries for Mobile (max-width 768px) -------- */
+
+@media (max-width: 768px) {
+  /* Make layout stack vertically */
+  .container {
+    flex-direction: column;
+    max-width: 100%;
+    margin: 10px auto;
+  }
+
+  /* Sidebar below content */
+  .sidebar {
+    width: 100%;
+    padding: 10px 5px;
+  }
+
+  /* Images scale fluidly */
+  .sidebar img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Stack nav links vertically */
+  nav ul.menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul.menu li {
+    margin: 8px 0;
+  }
+  
+  nav ul.menu li a {
+    font-size: 20px;
+  }
+
+  /* Reduce font sizes for better fit */
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  footer p {
+    font-size: 12px;
+  }
+
+  /* Prevent horizontal scroll */
+  html, body {
+    overflow-x: hidden;
+  }
+}
