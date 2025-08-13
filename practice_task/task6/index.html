@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact Form with Validation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Contact Us</h1>
+
+    <form id="contactForm" novalidate>
+      <!-- Name -->
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Your name" />
+      <small class="error" id="nameError"></small>
+
+      <!-- Email -->
+      <label for="email">Email</label>
+      <input type="text" id="email" placeholder="Your email" />
+      <small class="error" id="emailError"></small>
+
+      <!-- Message -->
+      <label for="message">Message</label>
+      <textarea id="message" placeholder="Your message"></textarea>
+      <small class="error" id="messageError"></small>
+
+      <button type="submit">Send</button>
+    </form>
+
+    <p class="success" id="successMsg"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
